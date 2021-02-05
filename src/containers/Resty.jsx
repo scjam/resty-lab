@@ -24,7 +24,7 @@ export default class Resty extends Component {
   fetch = () => {
     const { url, method, json } = this.state;
     Fetch(url, method, json)
-      .then(res => this.setState({ main: res }));
+      .then(res => this.setState({ results: JSON.stringify(res) }));
   }
 
   render() {

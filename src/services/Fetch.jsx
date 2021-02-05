@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-const fetch = (url, method, json) => {
+const fetchApi = (url, method, json) => {
   if(method !== 'GET'){
     return fetch(url, { method, headers: { 'Content-Type': 'application/json' }, json })
       .then(res => res.json());
@@ -9,4 +9,4 @@ const fetch = (url, method, json) => {
     .then(res => res.json());
 };
 
-export default fetch;
+export default fetchApi;

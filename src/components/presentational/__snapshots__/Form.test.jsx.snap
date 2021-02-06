@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form component renders Form 1`] = `
+<DocumentFragment>
+  <main>
+    <form>
+      <input
+        name="url"
+        placeholder="URL"
+        type="text"
+        value=""
+      />
+      <section>
+        <div>
+          <label>
+            <input
+              name="method"
+              type="radio"
+              value="GET"
+            />
+            GET
+          </label>
+          <label>
+            <input
+              name="method"
+              type="radio"
+              value="PUT"
+            />
+            PUT
+          </label>
+          <label>
+            <input
+              name="method"
+              type="radio"
+              value="POST"
+            />
+            POST
+          </label>
+          <label>
+            <input
+              name="method"
+              type="radio"
+              value="DELETE"
+            />
+            DELETE
+          </label>
+        </div>
+        <button>
+          Ok!
+        </button>
+      </section>
+      <textarea
+        name="json"
+      />
+    </form>
+  </main>
+</DocumentFragment>
+`;

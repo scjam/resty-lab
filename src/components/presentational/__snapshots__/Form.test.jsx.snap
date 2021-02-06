@@ -5,6 +5,7 @@ exports[`Form component renders Form 1`] = `
   <main>
     <form>
       <input
+        id="urlInput"
         name="url"
         placeholder="URL"
         type="text"
@@ -12,8 +13,11 @@ exports[`Form component renders Form 1`] = `
       />
       <section>
         <div>
-          <label>
+          <label
+            for="GET"
+          >
             <input
+              id="GET"
               name="method"
               type="radio"
               value="GET"

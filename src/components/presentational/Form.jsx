@@ -6,11 +6,11 @@ const Form = ({ url, method, json, onSubmit, onChange }) => {
   return (
     <main>
       <form onSubmit={onSubmit}>
-        <input type="text" name="url" placeholder="URL" value={url} onChange={onChange} />
+        <input id="urlInput" type="text" name="url" placeholder="URL" value={url} onChange={onChange} />
         <section>
           <div>
-            <label>
-              <input type="radio" name="method" value="GET" checked={method === 'GET'} onChange={onChange} />
+            <label htmlFor="GET">
+              <input id="GET" type="radio" name="method" value="GET" checked={method === 'GET'} onChange={onChange} />
             GET
             </label>
             <label>

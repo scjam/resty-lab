@@ -1,36 +1,35 @@
 /* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './styles/Form.css';
 
 const Form = ({ url, method, json, onSubmit, onChange }) => {
   return (
-    <main>
-      <form onSubmit={onSubmit}>
-        <input id="urlInput" type="text" name="url" placeholder="URL" value={url} onChange={onChange} />
-        <section>
-          <div>
-            <label htmlFor="GET">
-              <input id="GET" type="radio" name="method" value="GET" checked={method === 'GET'} onChange={onChange} />
+    <form onSubmit={onSubmit} className={styles.Form}>
+      <input id="urlInput" type="text" name="url" placeholder="URL" value={url} onChange={onChange} />
+      <section>
+        <div>
+          <label htmlFor="GET">
+            <input id="GET" type="radio" name="method" value="GET" checked={method === 'GET'} onChange={onChange} />
             GET
-            </label>
-            <label>
-              <input type="radio" name="method" value="PUT" checked={method === 'PUT'} onChange={onChange} />
+          </label>
+          <label>
+            <input type="radio" name="method" value="PUT" checked={method === 'PUT'} onChange={onChange} />
             PUT
-            </label>
-            <label>
-              <input type="radio" name="method" value="POST" checked={method === 'POST'} onChange={onChange} />
+          </label>
+          <label>
+            <input type="radio" name="method" value="POST" checked={method === 'POST'} onChange={onChange} />
             POST
-            </label>
-            <label>
-              <input type="radio" name="method" value="DELETE" checked={method === 'DELETE'} onChange={onChange} />
+          </label>
+          <label>
+            <input type="radio" name="method" value="DELETE" checked={method === 'DELETE'} onChange={onChange} />
             DELETE
-            </label>
-          </div>
-          <button>Ok!</button>
-        </section>
-        <textarea name="json" value={json} onChange={onChange}></textarea>
-      </form>
-    </main>
+          </label>
+        </div>
+        <button>Ok!</button>
+      </section>
+      <textarea name="json" value={json} onChange={onChange}></textarea>
+    </form>
   );
 };
 

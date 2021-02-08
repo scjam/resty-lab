@@ -1,0 +1,8 @@
+.Results {
+  background-color: white;
+  height: 40vw;
+  margin-top: 3em;
+  border: 2px solid navy;
+  overflow: auto;
+  padding: 1em;
+}

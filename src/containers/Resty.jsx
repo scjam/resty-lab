@@ -3,6 +3,7 @@ import Form from '../components/presentational/Form';
 import Header from '../components/presentational/Header';
 import Fetch from '../services/Fetch';
 import Results from '../components/presentational/Results';
+import styles from './Resty.css';
 
 export default class Resty extends Component {
   state={
@@ -33,14 +34,16 @@ export default class Resty extends Component {
     return (
       <>
         <Header />
-        <Form 
-          url={url}
-          method={method}
-          json={json}
-          onSubmit={this.handleSubmit}
-          onChange={this.handleChange}
-        />
-        <Results results={results} />
+        <section className={styles.Resty}>
+          <Form 
+            url={url}
+            method={method}
+            json={json}
+            onSubmit={this.handleSubmit}
+            onChange={this.handleChange}
+          />
+          <Results results={results} />
+        </section>
       </>
     );
   }
